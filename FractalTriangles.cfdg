@@ -1,0 +1,11 @@
+startshape fract
+background {b -1}
+rule fract {
+TRIANGLE { r rand_static(0,60)}
+fract { y .288 s .5 b .1}
+fract { s .5 r 180 b -.1}
+fract { x -.25 y -.144 s .5 b .15}
+fract { x .25 y -.144 s .5 b -.05}
+}
+
+rule fract .25 {}

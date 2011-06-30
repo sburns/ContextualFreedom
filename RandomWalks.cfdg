@@ -4,18 +4,20 @@ background { b -1 }
 rule start {
 	CIRCLE  { s .5 b -1 z 1 }
 	walk { sat .5 b 1 |h 359 h 1 }
+	walk { sat .5 b 1 |h 359 h 1 }
 }
  
-rule walk { CIRCLE { } walk { x 1 h .000001|} }
-rule walk { CIRCLE { } walk { x -1 h .000001| } }
-rule walk { CIRCLE { } walk { y 1 h .000001| } }
-rule walk { CIRCLE { } walk { y -1 h .000001| } }
+rule walk { CIRCLE { } walk { x .1 h .000001|} }
+rule walk { CIRCLE { } walk { x -.1 h .000001| } }
+rule walk { CIRCLE { } walk { y .1 h .000001| } }
+rule walk { CIRCLE { } walk { y -.1 h .000001| } }
 
-rule walk { walk { x 5 } }
+rule walk { walk { x 2 } }
 rule walk { walk { x -2  } }
 rule walk { walk { y 2 } }
 rule walk { walk { y -2  } }
 
 
-rule walk 0.0000001 { CIRCLE  { s 1 b -1 } }
+rule walk 0.00001 { CIRCLE  { s 1 b -1 } }
 
+//ZJA

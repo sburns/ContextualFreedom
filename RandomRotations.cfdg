@@ -2,32 +2,31 @@ startshape INIT
 background { b -1 }
 
 rule INIT {
-	MAIN { |h 300 sat .5 h 120 |b 1 b .1}
+	MAIN { |h 300 sat .5 h 60 |b 1 b .1}
 		}
 
 rule MAIN {
-	walk_cw {}
-	walk_cw {}
-	walk_cw {}
-	walk_cw {}
-	walk_cw {}
-	walk_cw {}
-	walk_ccw {}
-	walk_ccw {}
-	walk_ccw {}
-	walk_ccw {}
-	walk_ccw {}
-	walk_ccw {}
+	walk_cw {x 5}
+	walk_cw {x 10}
+	walk_cw {x -5 }
+	walk_cw {x -10}
+	walk_cw {y 5}
+	walk_cw {y -5}
+	walk_ccw {x 5}
+	walk_ccw {x -5}
+	walk_ccw {y -5}
+	walk_ccw {y 5 }
+	walk_ccw {y -10}
+	walk_ccw {y 10 }
 }
  
-rule walk_cw 1.0 { SQUARE {} walk_cw { s .999 y .25 r 2 h .001| b .001|} }
-rule walk_cw 1.0 { SQUARE {} walk_cw { s .999 y .25 r 5 h .001| b .001|} }
-rule walk_cw 1.0 { SQUARE {} walk_cw { s .999 y .25 r 1 h .001| b .001|} }
+rule walk_cw  { SQUARE {} walk_cw { s .9999 y .25 r 2 h .001| b .001|} }
+rule walk_cw  { SQUARE {} walk_cw { s .9999 y .25 r 2 h .001| b .001|} }
+rule walk_cw  { SQUARE {} walk_cw { s .9999 y .25 r 2 h .001| b .001|} }
 rule walk_cw 0.005 { walk_ccw { } }
  
-rule walk_ccw 1.0 { SQUARE {} walk_ccw { s .999 y .25 r -2 h .001| b .0001| } }
-rule walk_ccw 1.0 { SQUARE {} walk_ccw { s .999 y .25 r -5 h .001| b .0001| } }
-rule walk_ccw 1.0 { SQUARE {} walk_ccw { s .999 y .25 r -1 h .001| b .0001| } }
-
-rule walk_ccw 0.005 { walk_cwc { } }
+rule walk_ccw  { SQUARE {} walk_ccw { s .9999 y .25 r -2 h .001| b .0001| } }
+rule walk_ccw  { SQUARE {} walk_ccw { s .9999 y .25 r -2 h .001| b .0001| } }
+rule walk_ccw  { SQUARE {} walk_ccw { s .9999 y .25 r -2 h .001| b .0001| } }
+rule walk_ccw 0.005 { walk_cw { } }
  
